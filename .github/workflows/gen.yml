@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: "Run generation process"
       run: |
-        python siteforge/gen.py --content_path "data/content" --build_registry_path "data/build_registry.json" --asset_registry_path "data/asset_registry.json"  --output "_build"
+        python gen.py --content_path "data/content" --build_registry_path "data/build_registry.json" --asset_registry_path "data/asset_registry.json"  --output "build"
     - name: Upload static files as artifact
       id: deployment
       uses: actions/upload-pages-artifact@v3
