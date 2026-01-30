@@ -28,5 +28,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/warhammer-age-of-signmar-realms-of-ruin.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "WAOSROR"
+                }
+            }
+        ]
     }
 ]
