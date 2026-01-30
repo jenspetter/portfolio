@@ -15,5 +15,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/planet-zoo-console.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "PZC"
+                }
+            }
+        ]
     }
 ]

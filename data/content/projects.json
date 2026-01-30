@@ -72,16 +72,74 @@
                 "Href": "https://www.frontier.co.uk/our-games/planet-coaster-2"
             }
         ],
-        "Beer": [
-            "yippie",
-            "yippie2"
-        ],
         "Copyrights": [
             "Planet Coaster 2 © 2024 Frontier Developments plc. Frontier, the Frontier logo, Planet Coaster and the Planet Coaster 2 logo are trade marks of Frontier Developments plc, variably registered around the world. All rights reserved.",
             "© 2024 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.",
             "Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.",
             "© 2024 Sony Interactive Entertainment LLC.“PlayStation Family Mark\", “PlayStation”, “PS5 logo”, “PS5”, “PlayStation Shapes Logo” and the \"Play Has No Limits\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.",
             "Microsoft, the Xbox Sphere mark, the Series X logo, and Xbox Series X are trademarks of the Microsoft group of companies."
+        ]
+    },
+    {
+        "Id": "PZC",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Planet Zoo Console Edition/banner.png",
+            "Description":  "The popular Planet Zoo game, now on console!<br>",
+            "Href": "project/planet-zoo-console.html"
+        },
+        "Title": "Planet Zoo Console",
+        "Description": "Build a world for wildlife with Planet Zoo: Console Edition. From the developers of Planet Coaster and Zoo Tycoon, the ultimate zoo simulator is arriving on console. Planet Zoo brings controller support that puts powerful creative tools at your fingertips and includes years’ worth of features, content, and animals from the celebrated PC video game’s free updates. (Source: console website of Planet Zoo)",
+        "Date": "2021-2022",
+        "Tags": ["Cobra Engine", "CI/CD"],
+        "IntroVideo": "https://www.youtube.com/embed/iPXjBviHVCw?si=HrYu3wyYrb43EZ0W",
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Planet Zoo Console"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "CI programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Cobra Engine"
+            },
+            {
+                "Key": "Platform",
+                "Value": "Xbox, Playstation"
+            },
+            {
+                "Key": "Active period",
+                "Value": "2024"
+            },
+            {
+                "Key": "Release date",
+                "Value": "26 March, 2024"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "Maintaining of/helping with previously established application workflow pipelines and have these be extended to the development team of Planet Zoo Console Edition."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "console",
+                "Type": "website",
+                "Href": "https://www.planetzoogame.com/console"
+            },
+            {
+                "Host": "Frontier",
+                "Type": "website",
+                "Href": "https://www.frontier.co.uk/our-games/planet-zoo"
+            }
+        ],
+        "Copyrights": [
+            "Planet Zoo © 2024 Frontier Developments plc. All rights reserved."
         ]
     }
 ]
