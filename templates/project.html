@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block head %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+  <title>{{Info.Title}}</title>
+{% endblock head %}
+{% block body %}
+  {% include 'banner.html' %}
+
+  <div class="album py-5 bg-light" id="portfolio">
+    <div class="container">
+      <h1 class="text-left">{{Project.Title}}</h1>
+      <p>{{Project.Date}}</p>
+      <ul class="list-group list-group-horizontal project-attributes-view">
+        {% for tag in Project.Tags %}
+        <li class="list-group-item">{{tag}}</li>
+        {% endfor %}
+      </ul>
+      <hr/>
+      <p>{{Project.Description}}</p>
+      <hr/>
+      {% for link in Project.Links %}
+      <p>A link to the {{link.Host}} {{link.Type}} can be found <a href="{{link.Href}}", target="_blank">here</a></p>
+      {% endfor %}
+      <hr/>
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{Project.IntroVideo}}" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="row align-items-top">
+        <div class="col-md-6">
+          <h5>Project info</h5>
+          <hr>
+          <ul>
+            {% for info in Project.Info %}
+            <li><b>{{info.Key}}: </b>{{info.Value}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5>My responsibilities</h5>
+          <hr>
+          {% for responsibility in Project.Responsibilities %}
+            <p><b>{{responsibility.Category}}</b></p>
+            <ul>
+            {% for part in responsibility.Parts %}
+              <li>{{part}}</li>
+            {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </div>
+      <hr/>
+      {% for copyright in Project.Copyrights %}
+      <p>{{copyright}}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% include 'contact.html' %}
+
+  {% include 'footer.html' %}
+{% endblock body %}

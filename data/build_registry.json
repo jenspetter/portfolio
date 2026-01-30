@@ -2,5 +2,18 @@
     {
         "template": "home.html",
         "output": "index.html"
+    },
+    {
+        "template": "project.html",
+        "output": "project/planet-coaster-2.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "PC2"
+                }
+            }
+        ]
     }
 ]
