@@ -9,7 +9,9 @@
   <title>{{Info.Title}}</title>
 {% endblock head %}
 {% block body %}
-  {% include 'banner.html' %}
+  {% with navigation="from_home" %}
+    {% include "banner.html" %}
+  {% endwith %}
 
   <div class="album py-5 bg-light" id="portfolio">
     <div class="container text-center">
