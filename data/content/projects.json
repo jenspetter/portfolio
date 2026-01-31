@@ -3,7 +3,7 @@
         "Id": "PC2",
         "Thumbnail": {
             "Cover":"assets/portfolio/Planet Coaster 2/banner.jpg",
-            "Description":  "Create a splash with Planet Coaster 2 - sequel to the world’s best coaster park simulator!",
+            "Description":  "Create a splash with Planet Coaster 2 - sequel to the world’s best coaster park simulator!<br><br>",
             "Href": "project/planet-coaster-2.html"
         },
         "Title": "Planet Coaster 2",
@@ -84,7 +84,7 @@
         "Id": "PZC",
         "Thumbnail": {
             "Cover":"assets/portfolio/Planet Zoo Console Edition/banner.png",
-            "Description":  "The popular Planet Zoo game, now on console!<br>",
+            "Description":  "The popular Planet Zoo game, now on console!<br><br><br>",
             "Href": "project/planet-zoo-console.html"
         },
         "Title": "Planet Zoo Console",
