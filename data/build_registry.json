@@ -41,5 +41,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/jurassic-world-evolution-2.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "JWE2"
+                }
+            }
+        ]
     }
 ]
