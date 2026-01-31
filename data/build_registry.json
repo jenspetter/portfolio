@@ -67,5 +67,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/elite-dangerous.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "ED"
+                }
+            }
+        ]
     }
 ]
