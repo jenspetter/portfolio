@@ -54,5 +54,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/planet-zoo.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "PZ"
+                }
+            }
+        ]
     }
 ]

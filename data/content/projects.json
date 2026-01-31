@@ -275,5 +275,67 @@
             "© 2024 Sony Interactive Entertainment LLC. \"PlayStation Family Mark\", \"PlayStation\", \"PS5 Logo\", \"PS5\", \"PS4 Logo\", \"PS4\", \"PlayStation Shapes Logo\" and \"Play Has No Limits\" are registered trademarks of Sony Interactive Entertainment Inc.",
             "All other trademarks and copyright are acknowledged as the property of their respective owners."
         ]
+    },
+    {
+        "Id": "PZ",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Planet Zoo/banner.jpg",
+            "Description":  "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim.",
+            "Href": "project/planet-zoo.html"
+        },
+        "Title": "Planet Zoo (Post-Launch)",
+        "Description": "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them. (Source: Steam)",
+        "Date": "2021-2022",
+        "Tags": ["Steam", "Cobra Engine", ".NET"],
+        "IntroVideo": "https://www.youtube.com/embed/UCgppIh1tnY?si=fR2bBbKZ77YeX_TF",
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Planet Zoo"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Cobra Engine"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Active period",
+                "Value": "2021-2022"
+            },
+            {
+                "Key": "Release date",
+                "Value": "5 Nov, 2019"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "Making editor improvements, changes and optimizations in C# .NET to improve productivity of the Planet Zoo development team."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "Steam",
+                "Type": "page",
+                "Href": "https://store.steampowered.com/app/703080/Planet_Zoo/"
+            },
+            {
+                "Host": "Frontier",
+                "Type": "website",
+                "Href": "https://www.frontier.co.uk/our-games/planet-zoo"
+            }
+        ],
+        "Copyrights": [
+            "Planet Zoo © 2024 Frontier Developments plc. All rights reserved."
+        ]
     }
 ]
