@@ -1,11 +1,7 @@
-{% if background == "light" %}
-<div class="album py-5 bg-light" id="about">
-{% else %}
-<div class="album py-5" id="about">
-{% endif %}
-    <div class="container text-center jumbotron-contact">
-      <h1>Let's have a <span>chat</span>!</h1>
-      <hr>
-      {% for el in Info.Contact.Content %}<p>{{el}}</p>{% endfor %}
-    </div>
+<div class="album py-5 {{background}}" id="about">
+  <div class="container text-center jumbotron-contact">
+    <h1>Let's have a <span>chat</span>!</h1>
+    <hr>
+    {% for el in Info.Contact.Content %}<p>{{el}}</p>{% endfor %}
   </div>
+</div>
