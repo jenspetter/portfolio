@@ -44,7 +44,11 @@
 
   {% include 'about.html' %}
 
-  {% include 'contact.html' %}
+  {% with background="light" %}
+    {% include 'contact.html' %}
+  {% endwith %}
 
-  {% include 'footer.html' %}
+  {% with background="light" %}
+    {% include 'footer.html' %}
+  {% endwith %}
 {% endblock body %}

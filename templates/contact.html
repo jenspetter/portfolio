@@ -1,4 +1,8 @@
-<div class="album py-5 bg-light">
+{% if background == "light" %}
+<div class="album py-5 bg-light" id="about">
+{% else %}
+<div class="album py-5" id="about">
+{% endif %}
     <div class="container text-center jumbotron-contact">
       <h1>Let's have a <span>chat</span>!</h1>
       <hr>

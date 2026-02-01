@@ -1,8 +1,12 @@
+{% if background == "light" %}
 <footer class="text-muted bg-light">
-    <div class="container jumbotron-footer">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>Copyright © {{Info.Year}} Jens Petter | {{Info.Banner.Description}}</p>
-    </div>
-  </footer>
+{% else %}
+<footer class="text-muted">
+{% endif %}
+  <div class="container jumbotron-footer">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Copyright © {{Info.Year}} Jens Petter | {{Info.Banner.Description}}</p>
+  </div>
+</footer>
