@@ -399,5 +399,73 @@
         "Copyrights": [
             "Elite © 1984 David Braben & Ian Bell. Frontier © 1993 David Braben, Frontier: First Encounters © 1995 David Braben and Elite Dangerous © 1984 - 2023 Frontier Developments Plc. All rights reserved. 'Elite', the Elite logo, the Elite Dangerous logo, 'Frontier' and the Frontier logo are registered trademarks of Frontier Developments plc. Elite Dangerous: Odyssey and Elite Dangerous: Horizons are trademarks of Frontier Developments plc. All rights reserved. ‘PlayStation Family’, ‘PlayStation’, and ‘PS4’ are registered trademarks or trademarks of Sony Interactive Entertainment Inc. All other trademarks and copyright are acknowledged as the property of their respective owners."
         ]
+    },
+    {
+        "Id": "TN",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Til Nord/banner.png",
+            "Description":  "Til Nord is an open-world driving game, where the player explores a world reminiscent of the Lofoten Islands.",
+            "Href": "project/til-nord.html"
+        },
+        "Title": "Til Nord",
+        "Description": "Til Nord is an open-world driving game, where the player uses their snowmobile to explore a world reminiscent of the Lofoten Islands. Here they will find quests and random events that happen all over the large explorable map.",
+        "Date": "2020-2021",
+        "Tags": ["Steam", "Unreal", "C++"],
+        "IntroVideo": "https://www.youtube.com/embed/Fu8YevACoUE",
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Til Nord"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools & Gameplay programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Unreal Engine 4"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "1 year"
+            },
+            {
+                "Key": "Team: (people joining and leaving the team over the span of the project)",
+                "Value": "4 programmers\n4 artists\n6 designers\n1 producer"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Gameplay",
+                "Parts": [
+                    "The system to create missions with. Making sure this mission can be extended by designers to create their own mission types with."
+                ]
+            },
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "The custom event system that is used in our game that exists of small blueprint or C++ code objects that can run from anywhere in the game.",
+                    "An Unreal plugin that connects online Spreadsheets together with Unreal, making sure that all game data can be stored in Spreadsheets where this data can be saved and loaded from Unreal to Spreadsheets and vica versa in runtime."
+                ]
+            },
+            {
+                "Category": "Other",
+                "Parts": [
+                    "Participation in the concept, pre-production, production and release stage of this game project."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "Steam",
+                "Type": "page",
+                "Href": "https://store.steampowered.com/app/1490860/Project_Snow/"
+            }
+        ],
+        "Copyrights": []
     }
 ]

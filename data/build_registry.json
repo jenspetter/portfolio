@@ -80,5 +80,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/til-nord.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "TN"
+                }
+            }
+        ]
     }
 ]
