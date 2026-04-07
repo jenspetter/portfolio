@@ -467,5 +467,99 @@
             }
         ],
         "Copyrights": []
+    },
+    {
+        "Id": "WF",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/WarFair/banner.png",
+            "Description":  "WarFair is a turn-based strategy game with procedural generated levels where the player has to escape from the evil circus.",
+            "Href": "project/warfair.html"
+        },
+        "Title": "WarFair",
+        "Description": "WarFair offers players a unique experience in the world of turn-based strategy gaming. It will provide you with an immersive experience where information gathering through 3D audio, the use of a third-person camera and a movement system that encourages exploration.",
+        "Date": "2020",
+        "Tags": ["Itch.io", "C#", "Unity", "Jenkins"],
+        "IntroVideo": "https://www.youtube.com/embed/uEUyUWSFoeg",
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "WarFair"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools & Gameplay programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Unity"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "8 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "6 programmers\n7 artists\n3 designers\n2 producer"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Lead",
+                "Parts": [
+                    "I was the programming lead for this project for about 3 weeks."
+                ]
+            },
+            {
+                "Category": "Gameplay",
+                "Parts": [
+                    "Health and damage handling for the players and enemies Stats for the player.",
+                    "Implementation of a backend turn system",
+                    "Implementation of missions which are randomly chosen per level based on our procedural level generation system",
+                    "Implementation of collectibles which were the main objectives to complete a level in the game",
+                    "Implementation of spawning game items in a level based on our procedural level generation system"
+                ]
+            },
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "Implementation of a custom event system by extending the default event system of Unity"
+                ]
+            },
+            {
+                "Category": "Analytics",
+                "Parts": [
+                    "Setup of an analytics pipeline using the default analytics dashboard of Unity",
+                    "Setup of a form system in Unity where data of this form is send to the analytics dashboard of our game"
+                ]
+            },
+            {
+                "Category": "Continuous Integration",
+                "Parts": [
+                    "Setup of a continuous build pipeline using Jenkins and the build pipeline of Unity",
+                    "Implementation fo an automated Itch.io upload system using Jenkins"
+                ]
+            },
+            {
+                "Category": "UI",
+                "Parts": [
+                    "In game UI",
+                    "Tutorial UI",
+                    "Weapon choose and upgrade UI",
+                    "Menu"
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "Itch.io",
+                "Type": "page",
+                "Href": "https://buas.itch.io/warfair"
+            }
+        ],
+        "Copyrights": []
     }
 ]

@@ -93,5 +93,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/warfair.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "WF"
+                }
+            }
+        ]
     }
 ]
