@@ -10,7 +10,14 @@
         "Description": "Create a splash with Planet Coaster 2 - sequel to the world’s best coaster park simulator! Pre-purchase Planet Coaster 2 now to receive the Bonus Ride collection, containing three thrilling rides designed to give your guests an extra boost of fun. (Source: Steam)",
         "Date": "2023-2024",
         "Tags": ["Cobra Engine", ".NET", "CI/CD"],
-        "IntroVideo": "https://www.youtube.com/embed/qGPREY4fEeo?si=FC-NUMHhYi_6-dWM",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/qGPREY4fEeo?si=FC-NUMHhYi_6-dWM"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -91,7 +98,14 @@
         "Description": "Build a world for wildlife with Planet Zoo: Console Edition. From the developers of Planet Coaster and Zoo Tycoon, the ultimate zoo simulator is arriving on console. Planet Zoo brings controller support that puts powerful creative tools at your fingertips and includes years’ worth of features, content, and animals from the celebrated PC video game’s free updates. (Source: console website of Planet Zoo)",
         "Date": "2021-2022",
         "Tags": ["Cobra Engine", "CI/CD"],
-        "IntroVideo": "https://www.youtube.com/embed/iPXjBviHVCw?si=HrYu3wyYrb43EZ0W",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/iPXjBviHVCw?si=HrYu3wyYrb43EZ0W"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -153,7 +167,14 @@
         "Description": "Wage a campaign of brutal conquest in this realm-shattering real-time strategy game set in the Warhammer Age of Sigmar universe. Become a warlord and lead four unique factions to conquer the wild and savage Realm of Ghur in tense and tactical battles. (Source: Steam)",
         "Date": "2021-2023",
         "Tags": ["Cobra Engine", ".NET", "CI/CD"],
-        "IntroVideo": "https://www.youtube.com/embed/CXW7h2hC8_4?si=X2uhRJobzPfloXp0",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/CXW7h2hC8_4?si=X2uhRJobzPfloXp0"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -223,7 +244,14 @@
         "Description": "Jurassic World Evolution 2 is the much-anticipated sequel to Frontier’s highly successful Jurassic World Evolution. This bold new era in the Jurassic World Evolution game franchise builds upon the ground-breaking and immersive 2018 management simulation. (Source: Steam)",
         "Date": "2021-2022",
         "Tags": ["Cobra Engine", ".NET"],
-        "IntroVideo": "https://www.youtube.com/embed/j7E4BNJjKu0?si=sCQn5JLQSBN59N2x",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/j7E4BNJjKu0?si=sCQn5JLQSBN59N2x"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -287,7 +315,14 @@
         "Description": "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them. (Source: Steam)",
         "Date": "2021-2022",
         "Tags": ["Steam", "Cobra Engine", ".NET"],
-        "IntroVideo": "https://www.youtube.com/embed/UCgppIh1tnY?si=fR2bBbKZ77YeX_TF",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/UCgppIh1tnY?si=fR2bBbKZ77YeX_TF"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -349,7 +384,14 @@
         "Description": "Take control of your own starship in a cutthroat galaxy. Elite Dangerous is the definitive massively multiplayer space epic. (Source: Steam)",
         "Date": "2021",
         "Tags": ["Steam", "Cobra Engine", ".NET"],
-        "IntroVideo": "https://www.youtube.com/embed/YESNObZJTgQ?si=QtYzByiVvCMAmgle",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/YESNObZJTgQ?si=QtYzByiVvCMAmgle"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -411,7 +453,22 @@
         "Description": "Til Nord is an open-world driving game, where the player uses their snowmobile to explore a world reminiscent of the Lofoten Islands. Here they will find quests and random events that happen all over the large explorable map.",
         "Date": "2020-2021",
         "Tags": ["Steam", "Unreal", "C++"],
-        "IntroVideo": "https://www.youtube.com/embed/Fu8YevACoUE",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/Fu8YevACoUE"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/Til Nord/screenshot_1.png"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/Til Nord/screenshot_2.png"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",
@@ -479,7 +536,18 @@
         "Description": "WarFair offers players a unique experience in the world of turn-based strategy gaming. It will provide you with an immersive experience where information gathering through 3D audio, the use of a third-person camera and a movement system that encourages exploration.",
         "Date": "2020",
         "Tags": ["Itch.io", "C#", "Unity", "Jenkins"],
-        "IntroVideo": "https://www.youtube.com/embed/uEUyUWSFoeg",
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/uEUyUWSFoeg"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/WarFair/gameplay.png"
+                }
+            ]
+        },
         "Info": [
             {
                 "Key": "Project",

@@ -28,11 +28,20 @@
       {% endfor %}
       <hr/>
       <div class="row align-items-center">
-        <div class="col-md-12">
+        {# Determine column size (max 12) based on how many intro elements there are #}
+        {% set colsize = 12 // (Project.Intro.Covers | length) %}
+        {% for cover in Project.Intro.Covers %}
+        <div class="col-md-{{colsize}}">
+          {% if cover.Type == "Video" %}
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="{{Project.IntroVideo}}" allowfullscreen=""></iframe>
+            <iframe class="embed-responsive-item" src="{{cover.Href}}" allowfullscreen=""></iframe>
           </div>
+          {% endif %}
+          {% if cover.Type == "Image" %}
+          <img src="{{cover.Href}}" width="100%">
+          {% endif %}
         </div>
+        {% endfor %}
       </div>
       <hr/>
       <div class="row align-items-top">
