@@ -1,0 +1,162 @@
+{% extends "project.html" %}
+{% block project_specific %}
+<!--Start Extending the event system of Unity-->
+<h5>Extending the event system of Unity</h5>
+<hr>
+<p>
+    I wanted to see how far I can push Unity as a tools programmer regarding events.
+    I had around 6 years of Unity experience before this project started which is why I felt confident to tackle this
+    interesting problem.
+    I came across this resource which is where the current implementation of the event system for Warfair is based upon.
+</p>
+<p>
+    Implementation of this system allowed technical designers and other programmers in the team to create their own
+    events which resulted into faster iteration of already existing gameplay elements and faster implementation of new
+    gameplay elements.
+</p>
+<p>
+    The images here show a few examples of event listeners that are in the project.
+    Event listeners listen for certain events to be triggered.
+    Events triggers but also events themselves can be created by everyone where events are scriptable objects.
+    Scriptable objects can hold any data whatsoever which makes passing these event types around in the project very
+    powerful.
+</p>
+<div class="row align-items-top">
+    <div class="col-md-4">
+        <img src="../assets/portfolio/WarFair/EventListenerTypes.png" width="100%">
+        <p class="font-italic font-weight-light">Example of all the event listeners in Warfair</p>
+    </div>
+    <div class="col-md-4">
+        <img src="../assets/portfolio/WarFair/EventListenerInspectorExample.png" width="100%">
+        <p class="font-italic font-weight-light">Example of an event listener that executes another function via the
+            Unity event window</p>
+    </div>
+    <div class="col-md-4">
+        <img src="../assets/portfolio/WarFair/AllEvents.png" width="100%">
+        <p class="font-italic font-weight-light">Example of all the event objects in Warfair</p>
+    </div>
+</div>
+<br>
+<p>
+    A code snippet on how an event can be invoked is shown here where the example here shows how the audio cue event is
+    triggered in game
+</p>
+<pre><code class="csharp">public void TriggerAudioCueEvent()
+{
+  if (Application.isPlaying)
+  {
+    audioCueEvent.Invoke(new AudioCueData(audioCue, audioOwner));
+  }
+}     </code></pre>
+<hr>
+<!--End Extending the event system of Unity-->
+
+<!--Start Continuous Integration-->
+<h5>Continuous Integration</h5>
+<hr>
+<p>
+    I set up automated builds with Jenkins through the Unity build pipeline.
+    These builds ran on working days in the evening where it notified us in the morning when everyone put on their
+    computers if something broke in the build.
+</p>
+<p>
+    Deploying to Itch.io is also something that is done through Jenkins.
+    A single button click will build the project and upload to Itch.io.
+    The uploading to Itch.io was done using <a href="https://itch.io/docs/butler/" target="_blank">Butler</a> which is
+    the automation tool of Itch.io.
+</p>
+<p>
+    The build script in Unity that is run by Jenkins can be found here.
+</p>
+<hr>
+<!--End Continuous Integration-->
+
+<!--Start Scriptable objects-->
+<h5>Scriptable objects</h5>
+<hr>
+<p>
+    Scriptable objects were heavily used in the development of Warfair.
+    Here one can see some examples of scriptable objects that exist in the project.
+</p>
+<div class="row align-items-top">
+    <div class="col-md-6">
+        <img src="../assets/portfolio/WarFair/ScriptableObjectsHealth.png" width="100%">
+        <p class="font-italic font-weight-light">Example of scriptable objects for health pickups</p>
+    </div>
+    <div class="col-md-6">
+        <img src="../assets/portfolio/WarFair/ScriptableObjectsCharacters.png" width="100%">
+        <p class="font-italic font-weight-light">Example of scriptable objects for characters</p>
+    </div>
+</div>
+<div class="row align-items-top">
+    <div class="col-md-6">
+        <img src="../assets/portfolio/WarFair/ScriptableObjectsChallenges.png" width="100%">
+        <p class="font-italic font-weight-light">Example of scriptable objects for challenges</p>
+    </div>
+</div>
+<hr>
+<!--End Scriptable objects-->
+
+<!--Start Continuous Integration-->
+<h5>Continuous Integration</h5>
+<hr>
+<p>
+    I set up automated builds with Jenkins through the Unity build pipeline.
+    These builds ran on working days in the evening where it notified us in the morning when everyone put on their
+    computers if something broke in the build.
+</p>
+<p>
+    Deploying to Itch.io is also something that is done through Jenkins.
+    A single button click will build the project and upload to Itch.io.
+    The uploading to Itch.io was done using <a href="https://itch.io/docs/butler/" target="_blank">Butler</a> which is
+    the automation tool of Itch.io.
+</p>
+<p>
+    The build script in Unity that is run by Jenkins can be found here.
+</p>
+<pre><code class="csharp">using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+using BuildPipeline = UnityEditor.BuildPipeline;
+
+public class BuildScript : MonoBehaviour
+{
+  static void PerformBuild()
+  {
+    string[] defaultScene =
+    {
+      "Assets/Scenes/Main_Menu.unity",
+      "Assets/Scenes/Levels/Example.unity",
+      "Assets/Scenes/Levels/Generated.unity",
+      "Assets/Scenes/Levels/Tutorial.unity",
+      "Assets/Scenes/PostGame_Menu.unity"
+    };
+    BuildPipeline.BuildPlayer(
+      defaultScene,
+      "../Build/Windows/WarFair.exe", 
+      BuildTarget.StandaloneWindows,
+      BuildOptions.None);
+    }
+}     </code></pre>
+<hr>
+<!--End Continuous Integration-->
+
+<!--Start What I learned from this project-->
+<h5>What I learned from this project</h5>
+<hr>
+<p>
+    I learned many things about continuous integration and analytics during development of this project. I learned how
+    to work with Jenkins to an extend that Jenkins will
+    perform other tasks than just building a project. One of the examples for this is my implementation with Itch.io and
+    Jenkins. I also learned how analytics are seen
+    in games and how analytics work in Unity.
+</p>
+<p>
+    I also learned how to act as a programming lead for a team of 6 programmers. We were split up into feature teams
+    however the task of managing 6 programmers is something
+    that can be a bit challenging when one has barely any knowledge about leading a team. Luckily this went quite well
+    for me I think.
+</p>
+<!--End What I learned from this project-->
+{% endblock project_specific %}

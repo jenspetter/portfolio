@@ -95,7 +95,7 @@
         ]
     },
     {
-        "template": "project.html",
+        "template": "warfair.html",
         "output": "project/warfair.html",
         "boundContext": [
             {
