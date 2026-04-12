@@ -1,0 +1,124 @@
+{% extends "project.html" %}
+{% block project_specific %}
+<!--Start Spreadsheets With Unreal plugin-->
+<h5>Spreadsheets With Unreal plugin</h5>
+<hr>
+<p>The GitHub repo to this Spreadsheets With Unreal plugin can be found
+    <a href="https://github.com/jenspetter/SpreadsheetsWithUnreal" target="_blank">here</a>.
+</p>
+<hr>
+<p>I created a Spreadsheet plugin for Unreal to support the development of project Til Nord. 
+   This plugin makes it possible to communicate between online Google Spreadsheets and Unreal. One can from blueprint or C++ call functions that directly affect a Google Spreadsheet. 
+   The Spreadsheet plugin currently can:
+</p>
+<ul>
+    <li>Read from a Google Spreadsheet</li>
+    <li>Write to a Google Spreadsheet</li>
+    <li>Clear from a Google Spreadsheet</li>
+    <li>Append to a Google Spreadsheet table</li>
+    <li>Download a Google Spreadsheet to a file to later for example use in an Unreal DataTable</li>
+</ul>
+<p>A video is shown here which is a video where I explain how to use the Spreadsheets with Unreal plugin while I am in developing this project.</p>
+<div class="row align-items-center">
+    <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iA3PWdEy1Q0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</div>
+<hr>
+<!--End Spreadsheets With Unreal plugin-->
+<!--Start Missions-->
+<h5>Missions</h5>
+<hr>
+<p>I created the mission system of this game which is made in C++. 
+   Missions are run via a mission manager class where this class also takes care of locking / unlocking missions but also takes care of loading / saving the current progress of missions when stopping the game.
+</p>
+<p>The system to create missions with is made public in blueprints. 
+   This decision was made since the team had a lot of technical designers on board that wanted to create very unique missions. 
+   Having this creation part of the mission system public to blueprints allows not only those designers to create the missions they want, 
+   but also allows me to work further on more in depth parts of the mission system such as further iteration on saving / loading of missions for example.
+
+   The following missions are currently integrated in Til Nord:
+</p>
+<ul>
+    <li>Delivery missions</li>
+    <li>Time-trail missions</li>
+    <li>Rescue missions</li>
+</ul>
+<p>Shown here are 2 different missions that can be played. 
+   One mission is a time-trial mission where the challenge for the player is to finish the mission on the lowest time possible and the other mission is a delivery mission where the player needs to deliver mission elements to a location. 
+   A ramp is constructed in the delivery mission when the player finishes this mission which is also saved / loaded, 
+   meaning when the player stops the game and starts again then the ramp will still be there if the player finished the mission in a previous gameplay session.
+</p>
+<div class="row align-items-center">
+    <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JfEFguCKD8g" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jtMV1lNkylU" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</div>
+<hr>
+<!--End Missions-->
+<!--Start Concept, pre-production, production and release phases-->
+<h5>Concept, pre-production, production and release phases</h5>
+<hr>
+<p>I was here in all phases of the development of this project. 
+   I mostly researched in the concepting phase, set up pipelines in the pre-production phase, 
+   iterated on these pipelines in the production phase and optimized the game in the release phase. 
+   I wanted to talk a bit more about the concepting phase in this part of this page.
+</p>
+<p>We received a brief from the teachers that explained the rough guidelines in where they would like us to create our game. 
+   One can think of this as a bullet point list with elements that the teachers would like us to have in the game. 
+   For example “Streaming levels” or “Quests/missions, time-trials, objectives &amp; scripted events”. 
+</p>
+<p>We programmers researched a lot in this phase of the project as well aside from also helping with the concept of the game. 
+   We researched between 5 different engines for 3 weeks in order to determine which engine was correct to use for project Til Nord. 
+   The decision for an engine was one of the deliverables for the concepting phase. We researched between the following engines:
+</p>
+<ul>
+    <li>Unity</li>
+    <li>Unreal</li>
+    <li>CryEngine</li>
+    <li>Godot</li>
+    <li>Amazon Lumberyard</li>
+</ul>
+<p>Our research topics consisted of the following research topics:</p>
+<ul>
+    <li>Analytics</li>
+    <li>Atmospheric lighting</li>
+    <li>Automated Testing</li>
+    <li>Extending Editors</li>
+    <li>Networking</li>
+    <li>Photogrammetry landscape generation</li>
+    <li>Snow Physics</li>
+    <li>Streaming Levels</li>
+    <li>Vehicle Physics</li>
+</ul>
+<p>All these topics were heavily researched in all previously named engines. 
+   After 3 weeks we combined all our research and chose an engine to build project Til Nord with for the rest of the span of the development of the project.
+</p>
+<hr>
+<p>A download link to one of my research documents that I wrote while researching in the concept phase of this project can be found 
+    <a href="../assets/portfolio/Til Nord/Extending editors.pdf" download="" target="_blank">here</a>
+</p>
+<hr>
+<!--End Concept, pre-production, production and release phases-->
+<!--Start What I learned from this project-->
+<h5>What I learned from this project</h5>
+<hr>
+<p>I learned so far how to effectively do code reviews. 
+   Our team has a code review pipeline in place where we use Perforce to do our code reviews. 
+   These code reviews were heavily used in our project which resulted into less bugs and better quality code.
+</p>
+<p>I also learned so far that it is very hard to make a tool for people in your team that essentially changes their workflow to a better workflow. 
+   People tend to really stick to their workflow where it is very hard to show and convince people how my tools make their workflow faster. 
+   I experienced this a lot while developing the Spreadsheets with Unreal plugin.
+</p>
+<!--End What I learned from this project-->
+{% endblock project_specific %}

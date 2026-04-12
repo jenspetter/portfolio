@@ -82,7 +82,7 @@
         ]
     },
     {
-        "template": "project.html",
+        "template": "tilnord.html",
         "output": "project/til-nord.html",
         "boundContext": [
             {
