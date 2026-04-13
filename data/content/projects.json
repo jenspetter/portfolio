@@ -629,5 +629,65 @@
             }
         ],
         "Copyrights": []
+    },
+    {
+        "Id": "CE",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Chick Engine/header.png",
+            "Description":  "In 8 weeks I made a custom engine. This engine includes an EC system, resource managament, GUI support, an undo/redo system and much more.",
+            "Href": "project/chickengine.html"
+        },
+        "Title": "ChickEngine",
+        "Description": "I was in a team of 3 programmers during this project. One graphics programmer who was supposed to make a DirectX rendering pipeline for the engine, one gameplay / ai programmer who was supposed to make a small game in the engine that we were making and one engine programmer who was me who was supposed to make the engine and level editor where one can do functionality that would do engine related functionality.",
+        "Date": "2018",
+        "Tags": ["C++", "ImGui", "Tools Programming"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/0KNrVwYSa_w"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/Chick Engine/header.png"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "ChickEngine"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Engine programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Custom Engine"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "8 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "1 engine programmer\n1 graphics programmer\n1 gameplay programmer"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Engine",
+                "Parts": [
+                    "I was responbile for the whole engine in itself except for the graphics part of the engine (loading / drawing models and UI)."
+                ]
+            }
+        ],
+        "Links": [],
+        "Copyrights": []
     }
 ]

@@ -1,0 +1,74 @@
+{% extends "project.html" %}
+{% block project_specific %}
+<!-- Start Engine features -->
+<h5>Engine features</h5>
+<hr>
+<ul>
+    <li>Entity component system</li>
+    <li>ImGui GUI system complete with a debugger, inspector, hierarchy and resource loader view</li>
+    <li>Resource management</li>
+    <li>Undo / Redo system</li>
+    <li>Scene serialization / deserialization</li>
+    <li>RTTR implementation</li>
+    <li>FMOD audio implementation</li>
+</ul>
+<hr>
+<!-- End Engine features -->
+
+<!--Start Technical Design Document-->
+<h5>Technical Design Document</h5>
+<hr>
+<p>
+    A download link to the technical design document of this project where I wrote page 1 to 30 can be found <a
+        href="../assets/portfolio/Chick Engine/TDD.pdf" download target="_blank">here</a>
+</p>
+<hr>
+<p>
+    This technical design document covers most of the high level features that are currently in the engine.
+    This is for example the resource management or the ECS of the engine where I also go into multiple solutions to
+    these implementations where in the end the best solution according to me is chosen for that specific implementation
+    of the engine feature.
+    This makes this document also a bit of a research document.
+</p>
+<hr>
+<!--End Technical Design Document-->
+
+<!--Start Engine UML-->
+<h5>Engine UML</h5>
+<hr>
+<p>
+    The class diagram UML of the engine itself is quite big.
+    The engine itself starts with the “Application” class.
+    The application class has managers under him such as the “GUIManager” and the “EntityManager”.
+    These managers have their own class that runs “under” this manager class where this manager class of course manages
+    these classes.
+    I tried to simulate a system with this engine where there is one line of communication which goes as follows.
+    The manager classes talk to the application class and the classes that are controlled by these managers talk to the
+    specific manager class.
+    This allows me to program in a way where I can see my managers as “modules” that I can program and pop in and out of
+    the engine itself.
+    There are a few situations where managers need to access other managers which is something that mainly happens with
+    the “WindowManager” where this class needs to know which elements to draw which comes from another manager.
+</p>
+<img src="../assets/portfolio/Chick Engine/UML.png" width="100%">
+<hr>
+<!--End Engine UML-->
+
+<!--Start What I learned from this project-->
+<h5>What I learned from this project</h5>
+<hr>
+<p>
+    I learned a lot while making this engine, apart from learning how to make the actual engine I learned about Jenkins
+    and how to set that up on our school server.
+    I also learned about Javascript and Python a bit.
+</p>
+<p>
+    I also learned about teaem managament a bit more since we used Scrum for this project and I worked with
+    other people who had a specific programming role in the project which was a first fo me.
+</p>
+<p>
+    Apart from learning a lot I also enjoyed this project a lot. I
+    learned this project that I really like tools programming as well when focusing on Jenkins, Javascript and Python.
+</p>
+<!--End What I learned from this project-->
+{% endblock project_specific %}

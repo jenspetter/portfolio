@@ -106,5 +106,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "chickengine.html",
+        "output": "project/chickengine.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "CE"
+                }
+            }
+        ]
     }
 ]
