@@ -27,10 +27,12 @@
       <hr/>
       <p>{{Project.Description}}</p>
       <hr/>
+      {% if Project.Links | length > 0 %}
       {% for link in Project.Links %}
       <p>A link to the {{link.Host}} {{link.Type}} can be found <a href="{{link.Href}}", target="_blank">here</a></p>
       {% endfor %}
       <hr/>
+      {% endif %}
       <div class="row align-items-center">
         {# Determine column size (max 12) based on how many intro elements there are #}
         {% set colsize = 12 // (Project.Intro.Covers | length) %}
