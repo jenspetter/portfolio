@@ -689,5 +689,66 @@
         ],
         "Links": [],
         "Copyrights": []
+    },
+    {
+        "Id": "DS",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Deep Space/banner.png",
+            "Description":  "Deep Space is a VR retro space shooter where you control a spaceship and need to shoot enemies down that come towards you in waves.",
+            "Href": "project/deepspace.html"
+        },
+        "Title": "Deep Space",
+        "Description": "Deep Space is a VR game heavily focused on using voxel graphics & VFX to make a unique VR retro gaming experience for the player. The player needs to avoid enemies that spawn in a wave based pattern. The player can attack enemies in various ways where one can shoot the player but one can also tag multiple enemies to shoot at once.",
+        "Date": "2019",
+        "Tags": ["Blueprints", "Unreal Engine"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/h-tK-Wcx0Ps"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/Deep Space/Screenshot_1.png"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Deep Space"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools & Gameplay programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Unreal Engine 4"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC (VR)"
+            },
+            {
+                "Key": "Development time",
+                "Value": "4 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "2 programmers\n3 artists\n2 designers\n1 producer"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Gameplay",
+                "Parts": [
+                    "Creation of a blueprint inheritance system for designers to extent upon where multiple enemies can be created with. The base functionality for one enemy was made by me where designers could easily extend upon this functionality to make a new type of enemies.",
+                    "Creation of a dynamic data table driven wave system where a wave can contain a stack of elements that are flees of enemies, single enemies or a certain formation of enemies. Designers could with this system easily make and playtest multiple waves very quickly."
+                ]
+            }
+        ],
+        "Links": [],
+        "Copyrights": []
     }
 ]

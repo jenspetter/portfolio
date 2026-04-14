@@ -1,0 +1,108 @@
+{% extends "project.html" %}
+{% block project_specific %}
+<!--Start Data table driven wave system-->
+<h5>Data table driven wave system</h5>
+<hr>
+<div class="row align-items-top">
+    <div class="col-md-6">
+        <p>
+            This game is wave based where it was discussed with the team to make an extensive custom wave system where
+            it is an aim to make sure that waves can be easily made.
+            The choice for going with data tables has been made since it is an interesting concept in itself, easy to
+            adjust and extend and if done right can be very dynamic as well.
+        </p>
+        <p>
+            Shown here is a visual overview of every element that is inside the wave system, keeping in mind that the
+            system is built in a way that every element in this system can be extended and modified very easily.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <img src="../assets/portfolio/Deep Space/DataTableDrivenVisualOverview.png">
+    </div>
+</div>
+<hr>
+<p>
+    Shown here are screenshots of how a wave sequence data table in Unreal looks like.
+    A wave sequence is a collection of waves with extra variables such as a wait timer after the way has been completed
+    to wait for the next wave element to execute.
+    What follows are screenshots of some other wave specific elements that can be made and assigned in data tables. In
+    this case a “wave” and a “flee”.
+</p>
+<div class="row align-items-top">
+    <div class="col-md-4">
+        <img src="../assets/portfolio/Deep Space/WaveSequenceExample.png" width="100%">
+    </div>
+    <div class="col-md-4">
+        <img src="../assets/portfolio/Deep Space/WaveExample.png" width="100%">
+    </div>
+    <div class="col-md-4">
+        <img src="../assets/portfolio/Deep Space/FleeExample.png" width="100%">
+    </div>
+</div>
+<hr>
+<!--End Data table driven wave system-->
+
+<!--Start Data table driven audio system-->
+<h5>Data table driven audio system</h5>
+<hr>
+<p>
+    The audio system for this project is also set up with the help of a data table.
+    Unreal supports a lot of audio techniques to support beautiful sounds in Unreal: Sound bases, sound cues, sound
+    mixes etc.
+    I tried to make this system as I would think it makes sense for the user. The system supports 2D sounds, 3D sounds,
+    sound attenuation, sound bases,
+    playing a random sound between a given array of sound bases and variables to change the sound like the volume and
+    the pitch modifier.
+</p>
+<img src="../assets/portfolio/Deep Space/AudioDataTableExample.png" width="100%">
+<hr>
+<h6>2D audio</h6>
+<hr>
+<div class="row align-items-top">
+    <div class="col-md-6">
+        <p>
+            As shown in the screenshot here, one can call this function from anywhere without needing a reference to
+            anything to produce 2D sounds.
+            One only needs to give an enum value as a parameter of which sound one wants to play.
+            The underlying audio functionality of this function is handled through a blueprint function library.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <img src="../assets/portfolio/Deep Space/PlaySound2DExample.png" width="100%">
+    </div>
+</div>
+<hr>
+<h6>3D audio</h6>
+<hr>
+<p>
+    As shown in the screenshot here, one can call this function from anywhere without needing a reference to anything to
+    produce 3D sounds.
+    One only needs to give an enum value as a parameter of which sound one wants to play and the location of where the
+    sounds needs to be played.
+    This function returns an audio component variable which can be modified after the sound is played. This is handy for
+    adjusting the volume over time of a 3D sound for example.
+    One does need to make sure that this sound is active however otherwise errors occur.
+</p>
+<img src="../assets/portfolio/Deep Space/PlaySound3DExample.png" width="100%">
+<hr>
+<!--End Data table driven audio system-->
+
+<!--Start What I learned from this project-->
+<h5>What I learned from this project</h5>
+<hr>
+<p>
+    I really learned how much I like tools programming when I was working on the data table driven wave system in this
+    project.
+    It was a very short project though where I would have loved to extend this system further if the project lasted
+    longer.
+</p>
+<p>
+    I also learned to look more broad into solutions to problems when facing a problem in this project.
+    I researched first how difficult it would be to make a wave system in a custom tool and inside an in engine tool
+    such as data tables of Unreal before I actually made the call to work on this system.
+    I really liked this view of approaching a problem since it opens my view more towards multiple solutions to a
+    problem instead of directly tackling the problem with the first solution that comes to my mind since the first
+    solution is not always the right solution.
+</p>
+<!--End What I learned from this project-->
+{% endblock project_specific %}

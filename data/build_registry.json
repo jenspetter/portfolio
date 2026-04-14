@@ -119,5 +119,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "deepspace.html",
+        "output": "project/deepspace.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "DS"
+                }
+            }
+        ]
     }
 ]
