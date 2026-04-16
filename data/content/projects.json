@@ -237,7 +237,7 @@
         "Id": "JWE2",
         "Thumbnail": {
             "Cover":"assets/portfolio/Jurassic World Evolution 2/banner.jpg",
-            "Description":  "Jurassic World Evolution 2 is the much-anticipated sequel to Frontier’s highly successful Jurassic World Evolution.",
+            "Description":  "Jurassic World Evolution 2 is the much-anticipated sequel to Frontier’s highly successful Jurassic World Evolution.<br><br>",
             "Href": "project/jurassic-world-evolution-2.html"
         },
         "Title": "Jurassic World Evolution 2",
@@ -308,7 +308,7 @@
         "Id": "PZ",
         "Thumbnail": {
             "Cover":"assets/portfolio/Planet Zoo/banner.jpg",
-            "Description":  "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim.",
+            "Description":  "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim.<br><br>",
             "Href": "project/planet-zoo.html"
         },
         "Title": "Planet Zoo (Post-Launch)",
@@ -377,7 +377,7 @@
         "Id": "ED",
         "Thumbnail": {
             "Cover":"assets/portfolio/Elite Dangerous/banner.jpg",
-            "Description":  "Take control of your own starship in a cutthroat galaxy. Elite Dangerous is the definitive massively multiplayer space epic.",
+            "Description":  "Take control of your own starship in a cutthroat galaxy. Elite Dangerous is the definitive massively multiplayer space epic.<br><br>",
             "Href": "project/elite-dangerous.html"
         },
         "Title": "Elite Dangerous (Post-Launch)",
@@ -446,7 +446,7 @@
         "Id": "TN",
         "Thumbnail": {
             "Cover":"assets/portfolio/Til Nord/banner.png",
-            "Description":  "Til Nord is an open-world driving game, where the player explores a world reminiscent of the Lofoten Islands.",
+            "Description":  "Til Nord is an open-world driving game, where the player explores a world reminiscent of the Lofoten Islands.<br><br>",
             "Href": "project/til-nord.html"
         },
         "Title": "Til Nord",
@@ -529,7 +529,7 @@
         "Id": "WF",
         "Thumbnail": {
             "Cover":"assets/portfolio/WarFair/banner.png",
-            "Description":  "WarFair is a turn-based strategy game with procedural generated levels where the player has to escape from the evil circus.",
+            "Description":  "WarFair is a turn-based strategy game with procedural generated levels where the player has to escape from the evil circus.<br><br>",
             "Href": "project/warfair.html"
         },
         "Title": "WarFair",
