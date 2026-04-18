@@ -1,18 +1,18 @@
 <div class="container intro">
-    <div class="jumbotron jumbotron-fluid jumbotron-intro text-center">
-      <h1 class="display-4">{{Info.Banner.Title}}</h1>
-      <p class="lead">{{Info.Banner.Description}}</p>
-      {% if navigation == "from_home" %}
-      <button type="button" class="btn btn-light">
-        <a href="#portfolio">HOME</a>
-      </button>
-      <button type="button" class="btn btn-light">
-        <a href="#about">ABOUT ME</a>
-      </button>
-      {% elif navigation == "from_project" %}
-      <button type="button" class="btn btn-light">
-        <a href="../index.html">HOME</a>
-      </button>
-      {% endif %}
-    </div>
+  <div class="jumbotron jumbotron-fluid jumbotron-intro text-center">
+    <h1 class="display-4">{{Info.Banner.Title}}</h1>
+    <p class="lead">{{Info.Banner.Description}}</p>
+    {% if navigation == "from_home" %}
+    <button type="button" class="btn btn-light">
+      <a href="#portfolio">HOME</a>
+    </button>
+    <button type="button" class="btn btn-light">
+      <a href="#about">ABOUT ME</a>
+    </button>
+    {% elif navigation == "from_project" %}
+    <button type="button" class="btn btn-light">
+      <a href="../index.html">HOME</a>
+    </button>
+    {% endif %}
   </div>
+</div>
