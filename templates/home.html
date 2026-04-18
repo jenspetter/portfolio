@@ -16,7 +16,9 @@
       <hr>
       <div class="row">
         {% for project in Projects %}
+        {% if project.ShowOnHomePage %}
         {% include "project-thumbnail.html" %}
+        {% endif %}
         {% endfor %}
       </div>
     </div>
