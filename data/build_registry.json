@@ -132,5 +132,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "seacrest.html",
+        "output": "project/seacrest.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "SC"
+                }
+            }
+        ]
     }
 ]

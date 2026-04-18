@@ -750,5 +750,82 @@
         ],
         "Links": [],
         "Copyrights": []
+    },
+    {
+        "Id": "SC",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/SeaCrest/banner.png",
+            "Description":  "Seacrest is a fast phased game where the player has to build 4 walls around a lighttower in a Tetris like manner to defend itself against ghost ships.",
+            "Href": "project/seacrest.html"
+        },
+        "Title": "SeaCrest",
+        "Description": "This 8 week project was my first project while working together with game-designers. I worked together with artists before but never with designers. This project was given to us where every 2 weeks we would have a greenlit process where we had to present our current progress on the game, based on this process the teachers told us to continue or not continue with the project. Every 2 weeks another team that did not make a greenlit process would join a project that got greenlit. My team got greenlit every greenlit process.",
+        "Date": "2018",
+        "Tags": ["Blueprints", "Unreal Engine"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/84xcWeoNdsI"
+                },
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/SeaCrest/banner.png"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "SeaCrest"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools & Gameplay programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Unreal Engine 4"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "8 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "2 programmers\n3 artists\n4 designers"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Gameplay",
+                "Parts": [
+                    "Grid based block placing system where physics are being simulated on the z axis.",
+                    "Block and enemy placement editor using the TileMap and TileSet system in Unreal.",
+                    "A 3 match system in order to receive points.",
+                    "Camera movment for the tower.",
+                    "Health system for the player.",
+                    "Death of enemies."
+                ]
+            },
+            {
+                "Category": "Graphics",
+                "Parts": [
+                    "Diegetic UI for the health of the watchtower, shown as a gradient material on the watchtower itself."
+                ]
+            },
+            {
+                "Category": "Audio",
+                "Parts": [
+                    "Custom audio system using data tables where one can easily play a sound using library blueprint functions."
+                ]
+            }
+        ],
+        "Links": [],
+        "Copyrights": []
     }
 ]
