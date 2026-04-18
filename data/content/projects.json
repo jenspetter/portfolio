@@ -907,7 +907,7 @@
         "Id": "RAY",
         "Thumbnail": {
             "Cover":"assets/portfolio/Raytracer/banner.png",
-            "Description":  "For my second project on BUAS I had to create a Raytracer in 8 weeks without me knowing what a Raytracer was at all.",
+            "Description":  "For my second project on BUAS I had to create a Raytracer in 8 weeks without me knowing what a Raytracer was at all.<br><br>",
             "Href": "project/raytracer.html"
         },
         "Title": "Raytracer",
