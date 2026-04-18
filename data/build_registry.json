@@ -4,6 +4,10 @@
         "output": "index.html"
     },
     {
+        "template": "projects.html",
+        "output": "projects.html"
+    },
+    {
         "template": "project.html",
         "output": "project/planet-coaster-2.html",
         "boundContext": [

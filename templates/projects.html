@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+  <title>{{Info.Title}}</title>
+{% endblock head %}
+{% block body %}
+  {% with navigation="from_projects" %}
+    {% include "banner.html" %}
+  {% endwith %}
+
+  <div class="album py-5 bg-light" id="portfolio">
+    <div class="container text-center">
+      <h1 class="text-center">My <span>Portfolio</span></h1>
+      <hr>
+      <div class="row">
+        {% for project in Projects %}
+        {% include "project-thumbnail.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include 'about.html' %}
+
+  {% with background="bg-light" %}
+    {% include 'contact.html' %}
+  {% endwith %}
+
+  {% with background="bg-light" %}
+    {% include 'footer.html' %}
+  {% endwith %}
+{% endblock body %}
