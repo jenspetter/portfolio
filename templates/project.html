@@ -32,7 +32,7 @@
       {% endfor %}
       <hr/>
       {% endif %}
-      {% if Project.Intro.Cover | length > 0 %}
+      {% if Project.Intro.Covers | length > 0 %}
       <div class="row align-items-center">
         {# Determine column size (max 12) based on how many intro elements there are #}
         {% set colsize = 12 // (Project.Intro.Covers | length) %}
