@@ -175,5 +175,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "project.html",
+        "output": "project/protector-of-the-realm.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "POTR"
+                }
+            }
+        ]
     }
 ]
