@@ -145,5 +145,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "tileedit.html",
+        "output": "project/tileedit.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "TE"
+                }
+            }
+        ]
     }
 ]

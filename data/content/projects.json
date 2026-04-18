@@ -827,5 +827,68 @@
         ],
         "Links": [],
         "Copyrights": []
+    },
+    {
+        "Id": "TE",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/TileEdit/banner.png",
+            "Description":  "TileEdit is a custom Tilemap and Tileset editor made in WPF with C#. TileEdit output in JSON format. TileEdit is heavily inspired by the program Tiled.",
+            "Href": "project/tileedit.html"
+        },
+        "Title": "TileEdit",
+        "Description": "TileEdit is a Tilemap editor made in WPF. Integrated are a grid editor, layer options, tileset editor and paint options. Data is exported as JSON. Loading using a JSON formatted file is also supported. One can also of course load tilesets to create tilemaps with. A layer system is integrated in TileEdit where one can disable and enable these layers. TileEdit also has different paint options. TileEdit supports \"paint\", \"erase\", \"fill\" and \"delete fill\" paint options.",
+        "Date": "2020",
+        "Tags": ["WPF", "C#"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Image",
+                    "Href": "../assets/portfolio/TileEdit/banner.png"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "TileEdit"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "General programmer"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "2 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "solo project"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "General",
+                "Parts": [
+                    "TileSet loading and painting.",
+                    "Paint options: “paint”, “erase”, “fill”, “delete fill”.",
+                    "Layers.",
+                    "TileMap creation and configuration.",
+                    "Loading and saving of TileMaps.",
+                    "Exports to JSON format."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "GitHub",
+                "Type": "repo",
+                "Href": "https://github.com/jenspetter/Tilemap-Creator"
+            }
+        ],
+        "Copyrights": []
     }
 ]
