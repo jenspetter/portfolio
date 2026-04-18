@@ -902,5 +902,54 @@
             }
         ],
         "Copyrights": []
+    },
+    {
+        "Id": "RAY",
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Raytracer/banner.png",
+            "Description":  "For my second project on BUAS I had to create a Raytracer in 8 weeks without me knowing what a Raytracer was at all.",
+            "Href": "project/raytracer.html"
+        },
+        "Title": "Raytracer",
+        "Description": "I was given the task to create a raytracer for a project on BUAS. I did not know what a raytracer was when starting with this project. We were given reference images that we had to create with our own raytracer, each reference image brought it's own challenge that our raytracer had to work with.",
+        "Date": "2018",
+        "Tags": ["C++"],
+        "Intro": {
+            "Covers": []
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Raytracer"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "General programmer"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC"
+            },
+            {
+                "Key": "Development time",
+                "Value": "8 weeks"
+            },
+            {
+                "Key": "Team",
+                "Value": "solo project"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "General",
+                "Parts": [
+                    "Reflection, Refraction.",
+                    "Quad, sphere, cube and triangle support.",
+                    "Implementation of a BVH (Bounding Volume Hierarchy) system."
+                ]
+            }
+        ],
+        "Links": [],
+        "Copyrights": []
     }
 ]

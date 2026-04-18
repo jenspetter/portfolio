@@ -162,5 +162,18 @@
                 }
             }
         ]
+    },
+    {
+        "template": "raytracer.html",
+        "output": "project/raytracer.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "RAY"
+                }
+            }
+        ]
     }
 ]
