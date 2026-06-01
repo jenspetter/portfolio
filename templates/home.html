@@ -4,6 +4,14 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
     
   <title>{{Info.Title}}</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TLDW00KKFN');
+  </script>
 {% endblock head %}
 {% block body %}
   {% with navigation="from_home" %}
