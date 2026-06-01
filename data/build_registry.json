@@ -8,6 +8,10 @@
         "output": "projects.html"
     },
     {
+        "template": "all-blogs.html",
+        "output": "blog.html"
+    },
+    {
         "template": "project.html",
         "output": "project/planet-coaster-2.html",
         "boundContext": [
@@ -185,6 +189,45 @@
                 "Where": {
                     "Key": "Id",
                     "Value": "POTR"
+                }
+            }
+        ]
+    },
+    {
+        "template": "doxygen.html",
+        "output": "blog/doxygen.html",
+        "boundContext": [
+            {
+                "Name": "Blog",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "DOX"
+                }
+            }
+        ]
+    },
+    {
+        "template": "automatedbuildingwithunity.html",
+        "output": "blog/automated-building-with-unity.html",
+        "boundContext": [
+            {
+                "Name": "Blog",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "ABU"
+                }
+            }
+        ]
+    },
+    {
+        "template": "editorscriptsinunity.html",
+        "output": "blog/editor-scripts-in-unity.html",
+        "boundContext": [
+            {
+                "Name": "Blog",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "ESU"
                 }
             }
         ]

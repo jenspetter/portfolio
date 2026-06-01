@@ -1,0 +1,109 @@
+{% extends "blog.html" %}
+{% block blog_specific %}
+<h5>What is automated building?</h5>
+<p>Let’s first take a step back and talk about what automated building actually is. If you are not here for this then
+    feel free to move ahead to the “Automated building with Unity” section of this blog post.</p>
+<p>The word automated building kind of speaks for itself. The process of building automatically. Let’s say one has
+    scripts that need to be compiled automatically, that can be done depending on what language is used with MS Build
+    for example. Automated building can go as far as defining certain scenarios in a project and running them
+    automatically which is also part of automated building, however this is a bit more in depth then just compiling
+    scripts with MS Build. Game engines often can go very in depth when looking at the processes that can be automated,
+    this is only logical since with a game engine lots can be done.</p>
+<p>There are a lot of processes that can be automated with Unity. From compiling scripts, running scenes, ,building
+    assets to building an .exe file from your Unity project. Where of course all processes that one runs will be
+    provided when done running with an output log.</p>
+<p>Automation of certain processes in Unity is definitely a thing Unity herself though about. Unity has a command line
+    tool feature that is pretty easy to understand and cant be integrated into any automated build system very easily
+    where only a tiny bit of command line knowledge is required to get this set up.</p>
+<p>In this tutorial blog post I will focus on showing how to build a single or multiple scenes with the help of
+    automated building with Unity.</p>
+<hr>
+<h5>Automated building with Unity</h5>
+<h7><b>The command line</b></h7>
+<p>Like I discussed above, Unity has command line tools to take care of automated building but there is also a lot that
+    can be automated. How is such scalability of running a lot of processes in Unity done? Is this by supplying more
+    then 30 arguments with the command line tool for Unity? No, it is pretty straight forward, let me explain how this
+    works.</p>
+<p>Below here is shown the most basic command line call to make sure a certain project is build with Unity. For this, a
+    call to the Unity.exe is required where this file can be found in your installed Unity version directory. I will now
+    explain the arguments below counting from left to right.</p>
+<img alt="Responsive image" class="rounded mx-auto d-block" src="../assets/blog/Automated Building With Unity/img1.png"
+    style="padding: 5px;">
+<p class="text-center" style="font-size: 10px">Image 1: A screenshot that shows the most basic command line to call to
+    make sure a certain project is build with Unity.</p>
+<p>1. The argument “-batchmode” makes sure this command line call is run in batch mode, also known as “headless” mode.
+    By calling this the project does not display anything or accept user input when building. This is useful for running
+    servers for networked games but also for our purpose: automated building.</p>
+<p>2. Next is the “-projectPath” argument where one specifies the directory of the project that needs to be build
+    meaning this needs to be the folder where the Assets/Library/ProjectSettings folders are, so not the Assets folder
+    itself.</p>
+<p>3. Lastly is the “-executeMethod” argument which is an argument that deserves and requires its own header to talk
+    about.</p>
+<p>There are of course a lot more arguments that one can put in with this command line call. For a full overview of what
+    arguments can be added to this command line please refer to the “Useful links” section in this blog post.</p>
+<h7><b>Execute Method</b></h7>
+<p>In the example one can see that the -executeMethod argument specifies “MyEditorScript.PerformBuild”. “MyEditorScript”
+    is an actual script that lives in the editor folder in a Unity project. “PerformBuild” is a function inside the
+    script. One can see with this that with this last -executeMethod argument we refer to a function inside a script in
+    the editor folder.</p>
+<img alt="Responsive image" class="rounded mx-auto d-block" src="../assets/blog/Automated Building With Unity/img2.png"
+    style="padding: 5px;">
+<p class="text-center" style="font-size: 10px">Image 2: A screenshot of the bare minimum code that is needed in order to
+    construct a function with the BuildPipelilne from Unity.</p>
+<p>Up here one can see a screenshot of the bare minimum code needed in a build function. As one can see there is a
+    BuildPipeline script made by Unity that supports building. I will quickly go over the arguments for the
+    “BuildPlayer” call.</p>
+<p><b><u>Note that there are other calls in the build pipeline of Unity but for the sake of this tutorial blog post I
+            will go over how to build a single scene.</u></b></p>
+<p>1. Which scene needs to be build, this argument asks for an array, specifically an array strings defining the paths
+    to the scenes to build.</p>
+<p>2. The second argument denotes where the executable of the project needs to be outputted.</p>
+<p>3. The third argument asks for a build target, for now windows is used however one can of course put in any platform
+    target they want. Note that for windows one can also choose between a 64 or 32 windows target.</p>
+<p>4. The last argument for this call is the option to add build options. This can be for example to only build scripts,
+    or only make sure the models in the scenes are build and processed. Like shown above, one can also choose to not put
+    an extra option while building in this function call.</p>
+<p>By this point I can see that the concept of the editor folder might be a bit vague which is why I chose to discuss
+    the evidence folder in a bit more depth below here.</p>
+<h7><b>The editor folder</b></h7>
+<p>I will go over what the editor folder is in Unity since automated building through the command line requires one to
+    put a script with a function in the editor folder. This is one of the so called “special” folders in Unity. Scripts
+    placed in this folder are treated as Editor scripts rather than runtime scripts.</p>
+<p>These scripts add functionality to the Unity editor during development, and are not available in builds at runtime
+    meaning you can’t add these scripts to GameObjects as components for example as well. Usually when importing a
+    plugin that contains a .dll or .jar file this will also be stored in the editor folder. One can have sub folders in
+    the editor folder as long as the main editor folder is there.</p>
+<hr>
+<h5>My implementation of automated building with Unity</h5>
+<p>Recently I have started using automated building with Unity. I use the build pipeline from Unity in combination with
+    the command line tools quite heavily like shown in this blog post. </p>
+<p>I have hooked up automated building to an in the cloud build server where I can specify when to build my project and
+    how to build my project. Usually I build the scenes that are shown in my game projects where as a build option I
+    make sure to compile the scripts for those scenes as well. The in the cloud build server I use is Jenkins where I
+    make sure to call batch files in pipeline script whenever I decide to build my project. There are some GitHub
+    Actions tools as well specifically for Unity which enables one to not write all the Unity specific command line code
+    in batch files but instead makes one able to write directly in the GitHub Action itself which in my opinion is much
+    better then a batch file.</p>
+<hr>
+<h5>Conclusion</h5>
+<p>
+    There are a lot of automated possibilities in Unity. What I have showed in this blog post is just one simple
+    function of the Unity build pipeline.
+    Even though it looks like the build pipeline has only a few functions, every function has the possibility to input a
+    lot of different parameters which makes a few functions very powerful.
+    The possibility to combine the build pipeline of Unity with the command line tool options in Unity makes these few
+    functions even more powerful.
+    Personally I am curious how automation of games will evolve in the upcoming years but I know that Unity is quite on
+    point on by making sure a lot in game development can already by automated.
+    Would you agree with everything I talk about in this blog post? Do you find something not clear? Questions? Please
+    refer to my portfolio site to contact my directly (https://www.jenspetter.nl)
+</p>
+<hr>
+<h5>Useful links</h5>
+<p><a href="https://docs.unity3d.com/Manual/CommandLineArguments.html">Official Unity command line argument
+        documentation.</a></p>
+<p><a href="https://docs.unity3d.com/Manual/SpecialFolders.html">Special folders in Unity.</a></p>
+<p><a href="https://docs.unity3d.com/ScriptReference/BuildPipeline.html">Official Unity build pipeline
+        documentation.</a></p>
+<hr>
+{% endblock blog_specific %}

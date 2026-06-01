@@ -1,0 +1,29 @@
+[
+    {
+        "Id": "DOX",
+        "Thumbnail": {
+            "Cover": "assets/blog/DoxygenLogo.png",
+            "Description": "What is Doxygen? How to use Doxygen? You can read it in this post!<br><br><br><br><br><br><br><br>",
+            "Href": "blog/doxygen.html"
+        },
+        "Title": "Doxygen"
+    },
+    {
+        "Id": "ABU",
+        "Thumbnail": {
+            "Cover": "assets/blog/UnityLogo.png",
+            "Description": "How does automated building in Unity works? Why is it usefull? You can read it in this post!<br><br>",
+            "Href": "blog/automated-building-with-unity.html"
+        },
+        "Title": "Automated building with Unity"
+    },
+    {
+        "Id": "ESU",
+        "Thumbnail": {
+            "Cover": "assets/blog/UnityLogo.png",
+            "Description": "Extending the editor to the developer his / her desire? Increasing your workflow in Unity by doing this? You can read it in this post!",
+            "Href": "blog/editor-scripts-in-unity.html"
+        },
+        "Title": "Editor scripts in Unity"
+    }
+]

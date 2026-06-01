@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+  <title>{{Info.Title}}</title>
+{% endblock head %}
+{% block body %}
+  {% with navigation="from_blogs" %}
+    {% include "banner.html" %}
+  {% endwith %}
+
+  <div class="album py-5 bg-light" id="portfolio">
+    <div class="container text-center">
+      <h1 class="text-center">My <span>Blog</span></h1>
+      <hr>  
+      <div class="row">
+        {% for blog in Blogs %}
+        {% include "blog-thumbnail.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% with background="bg-light" %}
+    {% include 'contact.html' %}
+  {% endwith %}
+
+  {% with background="bg-light" %}
+    {% include 'footer.html' %}
+  {% endwith %}
+{% endblock body %}

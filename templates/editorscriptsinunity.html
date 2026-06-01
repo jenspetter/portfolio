@@ -1,0 +1,232 @@
+{% extends "blog.html" %}
+{% block blog_specific %}
+<p>There are a few ways of really finding the barriers of Unity in terms of extending the editor.
+    One can write custom inspectors but one can also write editor scripts.
+    This blog post will focus on extending the editor with editor scripts where I will show a very simple example on how
+    to write an editor script.</p>
+<hr>
+<h5>Editor scripts vs custom inspectors</h5>
+<p>On first glance, the difference between editor scripts and custom inspectors is not that much.
+    One can even see if they follow the first course link in the “Useful links” section of this blog post that the same
+    visual end result is achievable by writing a custom inspector as one can do when extending the editor with editor
+    scripts.
+    There are however quite some clear differences when one looks more closely to this topic.
+    Apart from differences there are also some similarities between the two which are discussed below as well.</p>
+<h7><b>Differences</b></h7>
+<p>A good rule of thumb (which is also a fact) to remember is that custom inspectors are build upon a class that derives
+    from a MonoBehaviour.
+    When extending the editor one doesn’t build upon a MonoBheaviour script at all. This is only logical because
+    MonoBehaviour scripts are just part of the in depth editor elements called “Components” which are of course used on
+    GameObjects.
+    Personally I always keep in mind myself that this is the main difference between the two.</p>
+<p>Custom inspector scripts need to be in the so called “Editor” folder. Scripts that have the purpose of extending the
+    editor don’t have to be in the Editor folder.</p>
+<p><b><u>Note that there are some special rules about the “Editor” folder in Unity that are quite important to know.
+            These are discussed in my previous blog post about Unity where I talk about Automated building with Unity.</u></b></p>
+
+<h7><b>Similarities</b></h7>
+<p>Both a script for extending the editor and a script for creating a custom inspector use the “GUILayout” GUI drawing
+    method of elements that was introduced with Unity 4.
+    Nowadays the Unity canvas has taken over to be the main source of drawing GUI and UI elements in Unity however
+    GUILayout is still supported and also used as
+    shown for when a developer wants to draw editor GUI elements which is needed when extending the editor or creating a
+    custom inspectors.</p>
+<p>Unity attributes can also be used if one wants to make a custom inspector or extend the editor. These could be the
+    “Header” attributes for example that we are used to with Unity.</p>
+
+<hr>
+<h5>Our example</h5>
+<h7><b>The use case</b></h7>
+<p>Since the aim for this blog post is to not be that long and to be an introduction to extending the editor in Unity we
+    will make an editor script that can really quickly make from a single object another primitive type object such as a
+    sphere or cylinder.
+    This example will show a base of how powerful extending the editor in Unity can be and will hopefully spark cool and
+    inventive ways of extending the editor to you, the reader!</p>
+<h7><b>The code</b></h7>
+<p>Below one can find the entire code of the custom editor we are writing. In this blog post I am taking the approach of
+    showing all the code off at once where later I explain what it does.</p>
+<pre><code class="csharp">using UnityEngine;
+using UnityEditor;
+
+
+public class MyExampleEditorWindow : EditorWindow
+{
+    [Header("New object to shape to")]
+    public PrimitiveType objectType;
+
+    [MenuItem("Window/Example window")]
+    public static void Show()
+    {
+        GetWindow<MyExampleEditorWindow>("Example window");
+    }
+
+    void OnGUI()
+    {
+        //Visually show the enum value in this class
+        objectType = (PrimitiveType) EditorGUILayout.EnumPopup("new shape type:", objectType);
+
+        //Creation of a button
+        if (GUILayout.Button("Shape"))
+        {
+            Shape(Selection.gameObjects);
+        }
+    }
+
+    private void Shape(GameObject[] objects)
+    {
+        //For everything in the selection GameObject array
+        foreach (GameObject obj in objects)
+        {
+            //Check what the new type of object is that the old object needs to shape to
+            //Shape the old object to the new object by creating a GameObject of that type,
+            //assigning its sharedMesh value and deleting it again
+            //Lastly we will make sure the name of the old object is also set to the name of the new object type
+            switch (objectType)
+            {
+                case PrimitiveType.Cube:
+                    GameObject newCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    obj.GetComponent<MeshFilter>().mesh = newCube.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newCube);
+
+                    obj.name = "Cube";
+
+                    break;
+                case PrimitiveType.Sphere:
+                    GameObject newSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    obj.GetComponent<MeshFilter>().mesh = newSphere.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newSphere);
+
+                    obj.name = "Sphere";
+
+                    break;
+                case PrimitiveType.Capsule:
+                    GameObject newCapsule = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                    obj.GetComponent<MeshFilter>().mesh = newCapsule.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newCapsule);
+
+                    obj.name = "Capsule";
+
+                    break;
+                case PrimitiveType.Cylinder:
+                    GameObject newCylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                    obj.GetComponent<MeshFilter>().mesh = newCylinder.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newCylinder);
+
+                    obj.name = "Cylinder";
+
+                    break;
+                case PrimitiveType.Plane:
+                    GameObject newPlane = GameObject.CreatePrimitive(PrimitiveType.Plane);
+                    obj.GetComponent<MeshFilter>().mesh = newPlane.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newPlane);
+
+                    obj.name = "Plane";
+
+                    break;
+                case PrimitiveType.Quad:
+                    GameObject newQuad = GameObject.CreatePrimitive(PrimitiveType.Quad);
+                    obj.GetComponent<MeshFilter>().mesh = newQuad.GetComponent<MeshFilter>().sharedMesh;
+                    DestroyImmediate(newQuad);
+
+                    obj.name = "Quad";
+
+                    break;
+            }
+        }
+    }
+}</code></pre>
+<h7><b>Why certain decisions have been made in the example code</b></h7>
+<p>There are some points to note about the code itself before I go in and actually discuss what the code does and how it
+    specifically works. The topic points to talk about are discussed below.</p>
+<p>Optimization: Note that for statements in Unity are at least 5 times faster then foreach statements.
+    Switch statements in this regard are of course slower then normal if / else if statements as well,
+    however because of the purpose of this tutorial nothing has been taken in to account in terms of optimization on
+    this part.</p>
+<p>Getting a reference to the mesh filter of a primitive: In Unity there is still no way to get easy access to a mesh
+    filter of a primitive. In this case I spawn a primitive object, get its mesh filter and delete it afterwards.
+    This is of course quite performance heavy. Another way to tackle this problem is to save primitives in the
+    “Resource” folder so that data such as mesh filter can be fetched from that folder.
+    This would already be faster and more clean looking then the current implementation, however because of the purpose
+    of this tutorial I chose for the implementation that takes less explaining time.
+    Personally I feel like when I go with the Resource solution I will need to explain the Resource folder as well which
+    is something I do not want to tackle in the blog post.</p>
+
+<h7><b>Explaining the code</b></h7>
+<p>As told earlier, this code makes sure primitive type object can transform into other primitive type objects. This is
+    done by simply setting the mesh filter of the new object equal to the object that needs to be changed.
+    As one can see this editor script supports this action on all current selected objects.
+    Below are some code snippets from the entire class that are explained a bit more in detail with elements that are
+    specifically needed for creating a custom editor window in Unit.</p>
+
+<p><b>The GetWindow function call</b></p>
+<pre><code class="csharp">[MenuItem("Window/Example window")]
+public static void Show()
+{
+    GetWindow<MyExampleEditorWindow>("Example window");
+}</code></pre>
+<p>In here we are calling the GetWindow function which comes from the Editor class this class inherits from. This
+    function will make sure the actual editor window is displayed by (as seen in the function call) a name for the
+    window.
+    The window can be activated by going in the editor to Window -> Example window which is what the MenuItem attribute
+    does.
+    The MenuItem attribute will make sure that this static void function will be called when clicking on this newly
+    created menu item.</p>
+<p><b><u>Note: Calling this function can also be done through scripts of course however this GetWindow call doesn’t like
+            being called a lot of times,
+            ideally one only calls this function once so that the window can set up. Setting the window up on Update for
+            example is really performance heavy.</u></b></p>
+
+<p><b>The OnGUI function call</b></p>
+<pre><code class="csharp">void OnGUI()
+{
+    //Visually show the enum value in this class
+    objectType = (PrimitiveType) EditorGUILayout.EnumPopup("new shape type:", objectType);
+          
+    //Creation of a button
+    if (GUILayout.Button("Shape"))
+    {
+        Shape(Selection.gameObjects);
+    }
+}</code></pre>
+<p>Maybe one has seen this before, the OnGUI function returning a void is called when the editor is refreshed (aka when
+    editor elements such as buttons, labels, dropdowns etc are called).
+    With a custom editor we would like to hook into this function to also take part in drawing editor elements.</p>
+<p>In this call I create 2 GUI elements. A enum drop down and a button.
+    One might think that my PrimitiveType enum is public so it should display in the editor however be aware that we are
+    making our own editor window now which requires us to manually make sure values are displayed.
+    The if statement on the button returns true when the button that is created is pressed, and false when it is not
+    pressed.</p>
+<p>The Selection.gameObjects call returns an array of GameObjects that are selected to me which is what I need for my
+    Shape function.</p>
+
+<h7><b>The end result</b></h7>
+<p>And there you have it, your very own custom editor window in Unity! Below is displayed a GIF that shows our example
+    in action.</p>
+<img alt="Responsive image" class="rounded mx-auto d-block" src="../assets/blog/Editor Scripts In Unity/ShapeShowcase2.gif"
+    style="padding: 5px;">
+
+<hr>
+<h5>Conclusion</h5>
+<p>Creating a basic editor window takes very less effort to do in Unity which is pretty pleasing to see. Coming up with a
+    good use case to make a custom editor in Unity is something that is a bit harder to think about.
+    Personally I think having the ability in Unity to create a custom editor with such ease is pretty strong of Unity
+    which is also not something you see easily done with other engines such as Unreal engine which requires a bit more
+    effort to create a similar editor window as we did today in Unity.
+    Unity also provided very easy to use straight forward calls that are helpful when creating custom editor windows
+    such as the Selection.gameObjects call that was used in the example in this blog post. All this makes me believe
+    that Unity is far in front of other engines when it comes to letting her users extend the editor themselves.
+    I am glad to see this is all possible in Unity and secretly I am also excited to see what more awesome things people
+    can do with this feature in Unity.
+    Anyone wants to see a blog post about this or a blog post about custom inspectors in Unity then please let me know
+    by contacting me.</p>
+
+<hr>
+<h5>Useful links</h5>
+<p><a href="https://learn.unity.com/tutorial/editor-scripting#l">Official Unity learning course on writing editor
+        scripts which also covers how to write custom inspectors as well.</a></p>
+<p><a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/Editor.html">Official Unity Editor
+        documentation.</a></p>
+<p><a href="https://youtu.be/491TSNwXTIg">How to make an editor window in Unity by Brackeys.</a></p>
+<p><a href="https://youtu.be/RInUu1_8aGw">How to make a custom inspector in Unity by Brackeys.</a></p>
+<hr>
+{% endblock blog_specific %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <title>{{Info.Title}}</title>
+{% endblock head %}
+{% block body %}
+  {% with navigation="from_blog" %}
+    {% include "banner.html" %}
+  {% endwith %}
+
+  <div class="album py-5 bg-light" id="portfolio">
+    <div class="container">
+      <h1 class="text-center">{{Blog.Title}}</h1>
+      <hr/>
+      {% block blog_specific %}{% endblock blog_specific %}
+    </div>
+  </div>
+
+  {% include 'contact.html' %}
+
+  {% include 'footer.html' %}
+{% endblock body %}

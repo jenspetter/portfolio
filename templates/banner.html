@@ -9,6 +9,9 @@
     <button type="button" class="btn btn-light">
       <a href="#about">ABOUT ME</a>
     </button>
+    <button type="button" class="btn btn-light">
+      <a href="blog.html">BLOG</a>
+    </button>
     {% elif navigation == "from_projects" %}
     <button type="button" class="btn btn-light">
       <a href="index.html">HOME</a>
@@ -16,9 +19,26 @@
     <button type="button" class="btn btn-light">
       <a href="#about">ABOUT ME</a>
     </button>
+    <button type="button" class="btn btn-light">
+      <a href="blog.html">BLOG</a>
+    </button>
+    {% elif navigation == "from_blogs" %}
+    <button type="button" class="btn btn-light">
+      <a href="index.html">HOME</a>
+    </button>
     {% elif navigation == "from_project" %}
     <button type="button" class="btn btn-light">
       <a href="../index.html">HOME</a>
+    </button>
+    <button type="button" class="btn btn-light">
+      <a href="../blog.html">BLOG</a>
+    </button>
+    {% elif navigation == "from_blog" %}
+    <button type="button" class="btn btn-light">
+      <a href="../index.html">PORTFOLIO</a>
+    </button>
+    <button type="button" class="btn btn-light">
+      <a href="../blog.html">BLOG</a>
     </button>
     {% endif %}
   </div>
