@@ -1,5 +1,93 @@
 [
     {
+        "Id": "JWE3",
+        "ShowOnHomePage": true,
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Jurassic World Evolution 3/banner.jpg",
+            "Description":  "The next entry in the award-winning series, Jurassic World Evolution 3 puts you in control of building and running your very own Jurassic World.",
+            "Href": "project/jurassic-world-evolution-3.html"
+        },
+        "Title": "Jurassic World Evolution 3",
+        "Description": "Help life find a way by synthesising, breeding, and nurturing prehistoric species. Manage each species and allow them to thrive, while helping your dinosaurs raise families and pass their genes onto future generations.<br><br>Create incredible havens for your dinosaurs to help them flourish, build exciting new attractions to amaze guests, and maintain control when disaster inevitably strikes.. (Source: Steam)",
+        "Date": "2024-2025",
+        "Tags": ["Cobra Engine", ".NET"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/ZjYbWx8Fs3o?si=OWf8MLEFMHi4hp2E"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Jurassic World Evolution 3"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools/CI/Devops programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Cobra Engine"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC, Xbox, Playstation"
+            },
+            {
+                "Key": "Active period",
+                "Value": "2024-2025"
+            },
+            {
+                "Key": "Release date",
+                "Value": "21 Oct, 2025"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "General improvements, optimizations and feature implementations on several project specific editors/applications to improve productivity of the Jurassic World Evolution 3 team.",
+                    "Handle editors/applications releases."
+                ]
+            },
+            {
+                "Category": "CI",
+                "Parts": [
+                    "Handle engine/tools specific internal CI processes."
+                ]
+            },
+            {
+                "Category": "DevOps",
+                "Parts": [
+                    "Help iterate on/maintain the existing build pipeline."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "Steam",
+                "Type": "page",
+                "Href": "https://store.steampowered.com/app/2958130/Jurassic_World_Evolution_3/"
+            },
+            {
+                "Host": "Frontier",
+                "Type": "website",
+                "Href": "https://www.frontier.co.uk/our-games/jurassic-world-evolution-3"
+            }
+        ],
+        "Copyrights": [
+            "Jurassic World Evolution 3 © 2025 Universal City Studios LLC and Amblin Entertainment, Inc. All Rights Reserved. © 2025 Frontier Developments plc. Frontier and the Frontier logo are trade marks of Frontier Developments plc, variably registered around the world. All rights reserved. FOOTAGE CAPTURED ON PC. NOT ALL IMAGES APPEAR IN-GAME.",
+            "© 2025 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.",
+            "Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.",
+            "© 2025 Sony Interactive Entertainment LLC. “PlayStation Family Mark\", “PlayStation”, “PS5 logo”, “PS5”, “PlayStation Shapes Logo” and \"Play Has No Limits\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.",
+            "Microsoft, the Windows logo, Xbox Sphere mark, Series X logo, Series S logo, Series X|S logo, Xbox Series X, Xbox Series S, and Xbox Series X|S are trademarks of the Microsoft group of companies.",
+            "NVIDIA, the NVIDIA logo, GeForce, GeForce RTX, GeForce Now are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and/or other countries."
+        ]
+    },
+    {
         "Id": "PC2",
         "ShowOnHomePage": true,
         "Thumbnail": {
@@ -701,7 +789,6 @@
     },
     {
         "Id": "DS",
-        "ShowOnHomePage": true,
         "Thumbnail": {
             "Cover":"assets/portfolio/Deep Space/banner.png",
             "Description":  "Deep Space is a VR retro space shooter where you control a spaceship and need to shoot enemies down that come towards you in waves.",

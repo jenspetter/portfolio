@@ -13,6 +13,19 @@
     },
     {
         "template": "project.html",
+        "output": "project/jurassic-world-evolution-3.html",
+        "boundContext": [
+            {
+                "Name": "Project",
+                "Where": {
+                    "Key": "Id",
+                    "Value": "JWE3"
+                }
+            }
+        ]
+    },
+    {
+        "template": "project.html",
         "output": "project/planet-coaster-2.html",
         "boundContext": [
             {
