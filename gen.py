@@ -12,7 +12,7 @@ parser.add_argument('--asset_registry_path', type=str, required=True)
 parser.add_argument('--output', type=str, required=True)
 
 """
-Json referenced method to the year in the current Dutch timezone
+Json referenced method to get the year in the Dutch timezone
 """
 @json_func
 def current_year_nl():
