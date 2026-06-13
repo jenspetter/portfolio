@@ -19,6 +19,6 @@
         ]
     },
     "Year": {
-        "$func": "current_year"
+        "$func": "current_year_nl"
     }
 }
