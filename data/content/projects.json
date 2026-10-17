@@ -1,5 +1,83 @@
 [
     {
+        "Id": "PZ2",
+        "ShowOnHomePage": true,
+        "Thumbnail": {
+            "Cover":"assets/portfolio/Planet Zoo 2/banner.png",
+            "Description":  "Let your creativity soar in the sequel to the beloved zoo simulator game!<br><br><br>",
+            "Href": "project/planet-zoo-2.html"
+        },
+        "Title": "Planet Zoo 2",
+        "Description": "Create and manage distinctive zoos around the world filled with awe-inspiring animals, including fully aquatic and flying species, before venturing beyond the zoo to release your animals into expansive new Wildlife Reserves.",
+        "Date": "2024-2026",
+        "Tags": ["Cobra Engine", ".NET", "CI/CD"],
+        "Intro": {
+            "Covers": [
+                {
+                    "Type": "Video",
+                    "Href": "https://www.youtube.com/embed/_zqLJeOiFbE?si=fTPz9kUigED5bHQb"
+                }
+            ]
+        },
+        "Info": [
+            {
+                "Key": "Project",
+                "Value": "Planet Zoo 2"
+            },
+            {
+                "Key": "Role(s)",
+                "Value": "Tools/CI/Devops programmer"
+            },
+            {
+                "Key": "Engine",
+                "Value": "Cobra Engine"
+            },
+            {
+                "Key": "Platform",
+                "Value": "PC, Xbox, Playstation"
+            },
+            {
+                "Key": "Active period",
+                "Value": "2024-2026"
+            },
+            {
+                "Key": "Release date",
+                "Value": "13 Oct, 2026"
+            }
+        ],
+        "Responsibilities": [
+            {
+                "Category": "Tools",
+                "Parts": [
+                    "General improvements, optimizations and feature implementations on several project specific editors/applications to improve productivity of the Planet Zoo 2 team.",
+                    "Handle editors/applications releases."
+                ]
+            },
+            {
+                "Category": "CI",
+                "Parts": [
+                    "Handle engine/tools specific internal CI processes."
+                ]
+            }
+        ],
+        "Links": [
+            {
+                "Host": "Steam",
+                "Type": "page",
+                "Href": "https://store.steampowered.com/app/3219030/Planet_Zoo_2/"
+            },
+            {
+                "Host": "Frontier",
+                "Type": "website",
+                "Href": "https://www.frontier.co.uk/games/planet-zoo-2"
+            }
+        ],
+        "Copyrights": [
+            "Planet Zoo 2 © 2026 Frontier Developments plc. All rights reserved.",
+            "© 2026 Frontier Developments plc. Frontier and the Frontier logo are trade marks of Frontier Developments plc, variably registered around the world. All rights reserved. All other trade marks and copyright are acknowledged as the property of their respective owners."
+        ]
+    },
+    {
         "Id": "JWE3",
         "ShowOnHomePage": true,
         "Thumbnail": {
