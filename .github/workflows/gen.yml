@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-  - cron: '0 23 31 12 *'
-  - cron: '0 13 14 06 *'
+  - cron: '0 00 * 10 *'
+    timezone: "Europe/Amsterdam"
 
 permissions:
   contents: read
